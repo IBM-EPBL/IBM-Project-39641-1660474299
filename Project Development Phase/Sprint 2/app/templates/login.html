@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETA - Login</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="login-form ">
+            <div class="header">
+                <header class="topic">Personal Expense Tracker</header>
+                <br>
+                <header>LOGIN</header>
+            </div>
+            <form action="{{ url_for('loginIn')}}" method="post">
+                <div class="inputField">
+                    <label for="email">email</label>
+                    <input type="text" name="email" required>
+                </div>
+                <div class="inputField">
+                    <label for="password">password</label>
+                    <input type="text" name="password" required>
+                </div>
+                <div class="inputField btn">
+                    <input type="submit" name="signup" value="LOGIN">
+                </div>
+                <div class="signup">
+                    <p>New user ? <a href="{{url_for('index')}}">signup here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
