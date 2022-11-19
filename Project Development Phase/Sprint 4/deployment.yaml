@@ -1,0 +1,20 @@
+ apiVersion: apps/v1
+ kind: Deployment
+ metadata:
+   name: flask-app-deployment
+ spec:
+   replicas: 1
+   selector:
+     matchLabels:
+       app: flaskapp
+   template:
+     metadata:
+       labels:
+         app: flaskapp
+     spec:
+       containers:
+       - name: flaskapp
+         image: icr.io/personal_expense_tracker/flask-app
+         imagePullPolicy: Always
+         ports:
+         - containerPort: 5000
